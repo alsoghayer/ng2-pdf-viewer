@@ -6,6 +6,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoMaterialModule } from './material.module';
 import { PdfViewerModule } from './pdf-viewer/pdf-viewer.module';
 import { AppComponent } from './app.component';
+(<any>window).pdfWorkerSrc = '/assets/pdf.worker.js';
 
 @NgModule({
   declarations: [AppComponent],

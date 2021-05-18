@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
-import {
-  MatButtonModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatSlideToggleModule,
-  MatToolbarModule,
-  MatSidenavModule,
-  MatTooltipModule,
-  MatOptionModule,
-  MatSelectModule,
-  MatIconModule
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatSidenavModule } from '@angular/material/sidenav'
+import { MatTooltipModule } from '@angular/material/tooltip'
+// import { MatOptionModule } from '@angular/material/option'
+import { MatSelectModule } from '@angular/material/select'
+
+import { MatIconModule } from '@angular/material/icon'
 
 @NgModule({
   imports: [
@@ -19,7 +18,7 @@ import {
     MatFormFieldModule,
     MatSlideToggleModule,
     MatSelectModule,
-    MatOptionModule,
+    // MatOptionModule,
     MatToolbarModule,
     MatSidenavModule,
     MatTooltipModule,
@@ -31,7 +30,7 @@ import {
     MatFormFieldModule,
     MatSlideToggleModule,
     MatSelectModule,
-    MatOptionModule,
+    // MatOptionModule,
     MatToolbarModule,
     MatSidenavModule,
     MatTooltipModule,

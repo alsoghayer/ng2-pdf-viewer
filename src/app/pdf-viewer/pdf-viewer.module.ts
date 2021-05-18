@@ -4,7 +4,7 @@
 import { NgModule } from '@angular/core';
 
 import { PdfViewerComponent } from './pdf-viewer.component';
-import { PDFJSStatic } from 'pdfjs-dist';
+import { PDFJSStatic } from 'pdfjs-dist/build/pdf';
 
 declare global {
   const PDFJS: PDFJSStatic;
@@ -18,7 +18,7 @@ export {
   PDFSource,
   PDFProgressData,
   PDFPromise
-} from 'pdfjs-dist';
+} from 'pdfjs-dist/build/pdf';
 
 @NgModule({
   declarations: [PdfViewerComponent],

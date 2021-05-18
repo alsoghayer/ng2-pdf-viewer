@@ -24,9 +24,9 @@ import {
   PDFSource,
   PDFProgressData,
   PDFPromise
-} from 'pdfjs-dist';
-import * as PDFJS from 'pdfjs-dist/es5/build/pdf';
-import * as PDFJSViewer from 'pdfjs-dist/es5/web/pdf_viewer';
+} from 'pdfjs-dist/build/pdf';
+import * as PDFJS from 'pdfjs-dist/build/pdf';
+import * as PDFJSViewer from 'pdfjs-dist/web/pdf_viewer';
 
 import { createEventBus } from '../utils/event-bus-utils';
 import { assign, isSSR } from '../utils/helpers';
@@ -341,7 +341,7 @@ export class PdfViewerComponent
     from(
       (this._pdf.getPage(
         currentViewer.currentPageNumber
-      ) as unknown) as Promise<PDFPageProxy>
+      ) as any) as Promise<PDFPageProxy>
     )
       .pipe(takeUntil(this.destroy$))
       .subscribe({
