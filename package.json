@@ -3,20 +3,6 @@
   "version": "8.0.0",
   "description": "Angular 5+ component for rendering PDF",
   "license": "MIT",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod=true",
-    "build:stats": "ng build --stats-json",
-    "analyze": "webpack-bundle-analyzer dist/stats-es2015.json",
-    "test": "ng test --watch false",
-    "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCustom",
-    "test:w": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "packagr": "ng-packagr -p package.json",
-    "docs": "ng build --prod --output-path docs --base-href ng2-pdf-viewer && cp ./docs/index.html ./docs/404.html"
-  },
   "private": false,
   "repository": {
     "type": "git",
@@ -39,54 +25,16 @@
   "homepage": "https://github.com/VadimDez/ng2-pdf-viewer#readme",
   "dependencies": {
     "@types/pdfjs-dist": "2.7.1",
-    "cross-env": "^7.0.3",
     "pdfjs-dist": "github:alsoghayer/pdfjs-dist",
-    "ts-loader": "^9.1.2",
     "tslib": "^2.1.0"
   },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^12.0.0",
-    "@angular/animations": "^12.0.0",
-    "@angular/cdk": "^12.0.0",
-    "@angular/cli": "^12.0.0",
-    "@angular/common": "^12.0.0",
-    "@angular/compiler": "^12.0.0",
-    "@angular/compiler-cli": "^12.0.0",
-    "@angular/core": "^12.0.0",
-    "@angular/forms": "^12.0.0",
-    "@angular/language-service": "^12.0.0",
-    "@angular/material": "^12.0.0",
-    "@angular/platform-browser": "^12.0.0",
-    "@angular/platform-browser-dynamic": "^12.0.0",
-    "@angular/router": "^12.0.0",
-    "@types/jasmine": "~3.5.0",
-    "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^13.7.2",
-    "codelyzer": "^5.1.2",
-    "jasmine-core": "~3.5.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~6.3.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage-istanbul-reporter": "~3.0.0",
-    "karma-jasmine": "~3.1.1",
-    "karma-jasmine-html-reporter": "^1.4.0",
-    "ng-packagr": "^12.0.0",
-    "protractor": "~7.0.0",
-    "puppeteer": "^5.5.0",
-    "rxjs": "~6.5.3",
-    "ts-node": "~8.6.2",
-    "tslint": "~6.1.0",
-    "webpack-bundle-analyzer": "^3.7.0",
-    "zone.js": "~0.11.4"
-  },
   "$schema": "./node_modules/ng-packagr/package.schema.json",
-  "ngPackage": {
-    "lib": {
-      "entryFile": "public_api.ts"
-    },
-    "whitelistedNonPeerDependencies": [
-      "@types/pdfjs-dist",
-      "pdfjs-dist"
-    ]
-  }
+  "main": "bundles/ng2-pdf-viewer.umd.js",
+  "module": "fesm2015/ng2-pdf-viewer.js",
+  "es2015": "fesm2015/ng2-pdf-viewer.js",
+  "esm2015": "esm2015/ng2-pdf-viewer.js",
+  "fesm2015": "fesm2015/ng2-pdf-viewer.js",
+  "typings": "ng2-pdf-viewer.d.ts",
+  "metadata": "ng2-pdf-viewer.metadata.json",
+  "sideEffects": false
 }
